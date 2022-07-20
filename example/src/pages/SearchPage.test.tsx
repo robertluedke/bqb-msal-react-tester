@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 import Layout from '../components/Layout';
 
 
-import { MsalReactTester } from 'msal-react-tester';
+import { MsalReactTester } from 'bqb-msal-react-tester';
 
 import SearchPage from './SearchPage';
 initializeIcons();

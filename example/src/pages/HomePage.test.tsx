@@ -8,7 +8,7 @@ import { MemoryRouter } from 'react-router-dom';
 import Layout from '../components/Layout';
 import HomePage from './HomePage';
 
-import { MsalReactTester } from 'msal-react-tester';
+import { MsalReactTester } from 'bqb-msal-react-tester';
 
 
 

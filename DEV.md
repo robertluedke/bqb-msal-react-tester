@@ -9,17 +9,17 @@ A template for publishing a React + TypeScript package to npm
 ## How to make the example working
 
 Because we want to import the package, as it is in npm (and not with a relative path)
-we need to link the root project, containing msal-react-tester, to the example.
+we need to link the root project, containing bqb-msal-react-tester, to the example.
 
 ``` bash
 cd /example
 
 # Install all required packages for the example
 npm i
-# Then link the project on level up in the folder tree (containing package.json form msal-react-tester)
+# Then link the project on level up in the folder tree (containing package.json form bqb-msal-react-tester)
 npm link "../"
 
-# confirm "msal-react-tester" is a link "extraneous"
+# confirm "bqb-msal-react-tester" is a link "extraneous"
 npm ls
 
 ├── @azure/msal-react@1.4.2
@@ -31,7 +31,7 @@ npm ls
 ├── @types/node@14.18.21
 ├── @types/react-dom@17.0.17
 ├── @types/react@17.0.47
-├── msal-react-tester@1.0.0 extraneous -> ./..
+├── bqb-msal-react-tester@1.0.0 extraneous -> ./..
 ├── react-dom@17.0.2
 ├── react-router-dom@6.3.0
 ├── react-scripts@5.0.1

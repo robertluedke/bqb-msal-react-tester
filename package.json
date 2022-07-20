@@ -1,6 +1,6 @@
 {
   "name": "bqb-msal-react-tester",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A npm package to simplify testing react application using msal-react",
   "author": {
     "name": "Sébastien Pertus",
@@ -19,8 +19,8 @@
     "start": "rollup -c -w"
   },
   "peerDependencies": {
-    "@azure/msal-react": "^1.4.2",
-    "@testing-library/react": "^12.1.5"
+    "@azure/msal-react": "^1.4.4",
+    "@testing-library/react": "^13.3.0"
   },
   "devDependencies": {
     "@types/jest": "^28.1.6",

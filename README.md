@@ -1,8 +1,8 @@
-# msal-react-tester. A tester package when using msal-react in your application
+# bqb-msal-react-tester. A tester package when using msal-react in your application
 
 ## About
 
-The [MSAL React Tester](https://www.npmjs.com/package/msal-react-tester) is a NPM package to allows you creating **unit tests** for any of your components that need to be authenticated (or not) using the `msal-react` package and [Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-overview).
+The [MSAL React Tester](https://www.npmjs.com/package/bqb-msal-react-tester) is a NPM package to allows you creating **unit tests** for any of your components that need to be authenticated (or not) using the `msal-react` package and [Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-overview).
 
 The **MSAL React Tester** package allows you to test your components in any of these scenario:
 - Testing a react component when a user "**is not**" authenticated.
@@ -24,15 +24,15 @@ The **MSAL React Tester** package allows you to test your components in any of t
 The **MSAL React Tester** package is available on [NPM](https://www.npmjs.com/).
 
 ``` bash
-npm install --save-dev msal-react-tester
+npm install --save-dev bqb-msal-react-tester
 ```
 
 ## Usage
 
-Creates a `[component].test.tsx` and import the msal-react-tester package:
+Creates a `[component].test.tsx` and import the bqb-msal-react-tester package:
 
 ``` ts
-import { MsalReactTester } from 'msal-react-tester';
+import { MsalReactTester } from 'bqb-msal-react-tester';
 ```
 
 ### Initialization:
@@ -50,12 +50,12 @@ beforeEach(() => {
   msalTester = new MsalReactTester(); 
   // or new MsalReactTester("Redirect") / new MsalReactTester("Popup")
 
-  // Ask msal-react-tester to handle and mock all msal-react processes:
+  // Ask bqb-msal-react-tester to handle and mock all msal-react processes:
   msalTester.spyMsal();
 });
 
 afterEach(() => {
-  // reset msal-react-tester
+  // reset bqb-msal-react-tester
   msalTester.resetSpyMsal();
 });
 ```
@@ -89,7 +89,7 @@ test('Home page render correctly when user is not logged', async () => {
     </MsalProvider>,
   );
   
-  // Wait for msal-react-tester to handle events from msal-react:
+  // Wait for bqb-msal-react-tester to handle events from msal-react:
   await msalTester.waitForRedirect();
 
   // Test your <HomePage /> component:
@@ -122,7 +122,7 @@ test('Home page render correctly when user logs in', async () => {
     </MsalProvider>,
   );
 
-  // Wait for msal-react-tester to handle events from msal-react:
+  // Wait for bqb-msal-react-tester to handle events from msal-react:
   await msalTester.waitForRedirect();
 
   // Getting the log in button.
@@ -130,7 +130,7 @@ test('Home page render correctly when user logs in', async () => {
   const signin = screen.getByRole('button', { name: 'Sign In' });
   userEvent.click(signin);
 
-  // Wait for msal-react-tester to handle the login process from msal-react:
+  // Wait for bqb-msal-react-tester to handle the login process from msal-react:
   await msalTester.waitForLogin();
 
   // From here, your user is supposed to be logged in the component:
